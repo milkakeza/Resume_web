@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Website</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </div>
+        <ul id="nav-list">
+          <li>
+            <a class="prof-link" href="index.html">
+              <img class="prof-img" src="/images/Milka.jpg" alt="Meet Me" />
+              <p class="prof-name">Milka Keza ISINGIZWE</p>
+            </a>
+          </li>
+
+          <div class="header-links">
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="ContactMe.html">Contact Me</a></li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+        <article>
+            <img class="body-img" src="/images/Milka.jpg" alt="My picture" />
+            <h2>
+              <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <p>Your favorite Software engineer!</p>
+                </div>
+                <div class="mySlides fade">
+                    <p> and Entrepreneur :)</p>
+                </div>
+            </div>
+            </h2>
+            
+            <section class="Circular-stars">
+                <div class="star_container">
+                    <div class="star"><a href="index.html">Home</a></div>
+                    <div class="star"><a href="aboutme.html">About Me</a></div>
+                    <div class="star"><a href="Resume.html">Resume</a></div>
+                    <div class="star"><a href="Achievements.html">Achievements</a></div>
+                    <div class="star"><a href="ContactMe.html">Contact</a></div>
+                
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="phone_contact">
+              <h3>Phone</h3>
+              <p>+250 789405661</p>
+        </div>
+        <div class="social-media">
+          <h3>Follow Me</h3>
+          <ul>
+            <li>
+              <a target="_blank" href="https://github.com/milkakeza">
+                <img src="/images/github icon.png" alt="">
+              </a>
+            </li>
+            <li><a target="_blank" href="...">Instagram</a></li>
+            <li><a target="_blank" href="...">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Responsive navbar
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navList = document.getElementById('nav-list');
+
+      mobileMenu.addEventListener('click', () => {
+          navList.classList.toggle('active');
+          mobileMenu.classList.toggle('active');
+      });
+  </script>
+
+<script>
+  let slideIndex = 0; // Start at the first slide
+  showSlides(); // Call function to show slides
+
+  function showSlides() {
+      const slides = document.getElementsByClassName("mySlides");
+      
+      // Loop through all slides and set display to none
+      for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      
+      slideIndex++; // Move to the next slide
+      if (slideIndex > slides.length) {slideIndex = 1} // Reset to first slide
+      slides[slideIndex - 1].style.display = "block"; // Display the current slide
+      setTimeout(showSlides, 3000); // Change slide every 3 seconds
+  }
+</script>
+
+
+  </body>
+</html>
