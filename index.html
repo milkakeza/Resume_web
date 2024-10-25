@@ -1,112 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="./CSS/style.css" />
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>My porfolio</title>
+    </head>
+    <body>
+        <main>
+          <!-- Sidebar section-->
+          <aside>
+            <!-- Unordered list containing navigation links -->
+            <ul class="Links">
+              <!-- Navigation item for Home -->
+              <li onclick="Navigate(0)" class="activeLink">
+                <!-- Icon for home -->
+                <i class="fa-solid fa-house"></i>
+                <!-- Text label for Home -->
+                <p>Home</p>
+              </li>
+              <!-- Navigation item for About Me -->
+              <li onclick="Navigate(1)"><i class="fa-solid fa-user" ></i>
+                <!-- Text label for About Me section -->
+                <p>About Me</p>
+              </li>
+              <!-- Navigation item for Resume -->
+              <li onclick="Navigate(2)"><i class="fa-solid fa-list"></i>
+                <!-- Text label for Resume section -->
+                <p>Resume</p>
+              </li>
+              <!-- Navigation item for Achievements -->
+              <li onclick="Navigate(3)"><i class="fa-solid fa-award"></i>
+                <!-- Text label for Achievements section -->
+                <p>Achievements</p>
+              </li>
+              <!-- Navigation item for Contact Me -->
+              <li onclick="Navigate(4)"><i class="fa-solid fa-comments"></i>
+                <!-- Text label for Contact Me section -->
+                <p>Contact Me</p>
+              </li>
+            </ul>
+          </aside>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume Website</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="menu-toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <ul id="nav-list">
-          <li>
-            <a class="prof-link" href="./index.html">
-              <img class="prof-img" src="./images/Milka.jpg" alt="Meet Me" />
-              <p class="prof-name">Milka Keza ISINGIZWE</p>
-            </a>
-          </li>
+            <!-- Main Swiper Container -->
+            <div class="swiper mySwiper">
+                <!-- Slide wrapper for Swiper -->
+                <div class="SlideContainer swiper-wrapper">
+                    <!-- First slide: Home -->
+                    <div class="swiper-slide home-slide">
+                        <div class="HomeContent">
+                            <!-- Greeting message -->
+                            <h1>Hi! I'm <span class="stylethename">Milka</span>,</h1>
+                            <!-- Subtitle indicating role -->
+                            <h2>A <span class="description">Web Developer</span></h2>
+                            <!-- Button group for actions -->
+                            <div class="buttonGroup" >
+                                <!-- Button to download CV -->
+                                <button class="downloadbtn">Download CV</button>
+                                <!-- Button to navigate to the Contact Me section -->
+                                <button class="contactMe-btn" onclick="Navigate(4)">Contact Me</button></div>
+                        </div>
+                        <div class="Prof-img">
+                            <div class="top-right-corner">
+                                <!-- Decorative horizontal lines -->
+                                <hr class="hr1">
+                                <hr class="hr2">
+                            </div>
+                            <!-- Profile image -->
+                            <img src="images/Milka.jpg" alt="">
+                            <div class="bottom-left-corner">
+                                <!-- Decorative horizontal lines -->
+                                <hr class="hr1">
+                                <hr class="hr2">
+                            </div>
+                        </div>
+                        <!-- Instruction for user -->
+                        <p class="slide-help">Scroll for next slides :)</p>
+                    </div>
 
-          <div class="header-links">
-            <li><a href="./aboutme.html">About Me</a></li>
-            <li><a href="./ContactMe.html">Contact Me</a></li>
-          </div>
-        </ul>
-      </nav>
-    </header>
+                     <!-- Second slide: About Me -->
+                    <div class="swiper-slide">
+                        <div class="about-us">
+                            <!-- Section heading -->
+                        <h1 class="heading">About Me</h1>
+                        <!-- All about me description -->
+                        <p class="aboutme-all"> 
+                            I’m a software engineer and entrepreneur with a passion for building innovative solutions that make a difference. Born and raised in Kigali, Rwanda, I've always been curious about how things work, which naturally led me to pursue a career in technology.
+                        </p>
+                        <div class="about-me-divison">
+                            <div class="about-me-table">
+                                <!-- Journey description -->
+                                <li><span>My Journey:</span> From the first time I wrote a line of code, I was hooked. I enjoy the challenge of problem-solving and the satisfaction of seeing a project come to life. After diving into software engineering, I realized that what I love most is creating meaningful products that help people and drive change. This passion for impact also fuels my entrepreneurial spirit.</li>
+                                <!-- Interests description -->
+                                <li><span>What I love:</span> I’m particularly excited about web development, and I love working on projects that require creativity and critical thinking. Apart from coding, I have a surprising passion for crocheting. Yes, you read that right—crocheting! Even though I spend most of my time immersed in code, I never skip my crocheting days or tutorials. Haha!</li>
+                                <!-- Cybersecurity journey -->
+                                <li><span>My cybersecurity Journey:</span> As much as I love building innovative solutions, I’ve found myself increasingly drawn to cybersecurity, where my mission is to create a more secure cyber ecosystem. Whether I’m working on a new project, learning about ethical hacking, or exploring the latest security technologies, I’m driven by a deep desire to protect data and ensure safe digital experiences for users. </li>
+                                 <!-- Skills listing -->
+                                <li><span>Proficient in:</span>HTML, CSS, JavaScript, Python.</li>
+                               
+                                
+                            </div>
+    
+                            <div class="proficience-bar">
+                                <!-- Proficiency bars for skills -->
+                                <li>
+                                    <p>HTML</p>
+                                    <div class="bar">
+                                        <!-- HTML proficiency bar -->
+                                        <div class="active-bar" style="width:98%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>CSS</p>
+                                    <div class="bar">
+                                        <!-- CSS proficiency bar -->
+                                        <div class="active-bar" style="width:85%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>JavaScript</p>
+                                    <div class="bar">
+                                        <!-- JavaScript proficiency bar -->
+                                        <div class="active-bar" style="width:80%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>Python</p>
+                                    <div class="bar">
+                                        <!-- Python proficiency bar -->
+                                        <div class="active-bar" style="width:60%"></div>
+                                    </div>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <main>
-      <article>
-        <img class="body-img" src="./images/Milka.jpg" alt="My picture" />
-        <h2>
-          <div class="slideshow-container">
-            <div class="mySlides fade">
-              <p>Your favorite Software engineer!</p>
-            </div>
-            <div class="mySlides fade">
-              <p>and Entrepreneur :)</p>
-            </div>
-          </div>
-        </h2>
+                    <!-- Third slide: Resume -->
+                    <div class="swiper-slide portfolio">
+                        <h1 class="heading">Resume</h1>
+                        <div class="resume">
+                            
+                            <h2>Summary</h2>
+                            <p>I am a front-end developer currently pursuing a Bachelor’s degree at the African Leadership University. I am eager to apply my skills and knowledge in a dynamic tech environment and contribute to innovative projects at a leading technology company.</p>
+                        </div>
+                        <div class="resume">
+                            
+                            <h2>Education</h2>
+                            <p>I am currently pursuing a Bachelor of Science in Software Engineering at the African Leadership University, Kigali, Rwanda, from January 2024 to January 2027. My coursework includes key subjects such as Algorithms, Linux Scripting, Unix/Bash, and Self-Leadership and Team Dynamics, providing a strong foundation in both technical and leadership skills. Additionally, I am an active member of the Google Developer Student Club at the university, contributing to various tech initiatives and community growth.</p>
+                        </div>
+                        <div class="resume">
+                            
+                            <h2>Projects</h2>
+                            <p>GradeBookApp is a software application I developed to efficiently manage student records, courses, and grades. It was built using Python, demonstrating my proficiency in backend programming and data management. The project is hosted on GitHub and can be accessed here: <a href="https://github.com/milkakeza/grade-book-app_MilkaKezaISINGIZWE">GradeBookApp</a></p>
+                        </div>
 
-        <section class="Circular-stars">
-          <div class="star_container">
-            <div class="star"><a href="index.html">Home</a></div>
-            <div class="star"><a href="aboutme.html">About Me</a></div>
-            <div class="star"><a href="Resume.html">Resume</a></div>
-            <div class="star"><a href="Achievements.html">Achievements</a></div>
-            <div class="star"><a href="ContactMe.html">Contact</a></div>
-          </div>
-        </section>
-      </article>
-    </main>
-    <footer>
-      <div class="footer-container">
-        <div class="phone_contact">
-          <h3>Phone</h3>
-          <p>+250 789405661</p>
-        </div>
-        <div class="social-media">
-          <h3>Follow Me</h3>
-          <ul>
-            <li>
-              <a target="_blank" href="https://github.com/milkakeza">
-                <img src="./images/github icon.png" alt="" />
-              </a>
-            </li>
-            <li><a target="_blank" href="...">Instagram</a></li>
-            <li><a target="_blank" href="...">Twitter</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+                    </div>
 
-    <script>
-      // Responsive navbar
-      const mobileMenu = document.getElementById("mobile-menu");
-      const navList = document.getElementById("nav-list");
+                    <!-- Fourth slide: Achievements -->
+                    <div class="swiper-slide achievements-slide">
+                        <div class="achievementContent">
+                            <h1>Meet <span class="stylethename">Milka</span>,</h1>
+                            <h2>An <span class="description">ELP</span> Scholar</h2>
+                            <br>
+                             <!-- Achievements description -->
+                            <p>In August 2022, I was selected as one of the top 34 highest-scoring students at both the district and national levels in the NESA national exams to join the Equity Leadership Program, an initiative by Equity Bank Rwanda. Serving as the president of the program's second cohort, this experience enhanced my leadership and communication skills, opened global opportunities for career advancement, and instilled in me a deep commitment to give back to my community and address its challenges.</p>
+                    
+                        </div>
+                        <div class="Achiev-img">
+                            <div class="top-right-corner">
+                                <!-- Decorative horizontal lines -->
+                                <hr class="hr1">
+                                <hr class="hr2">
+                            </div>
+                            <!-- Achievement image -->
+                            <img src="images/Milka2.jpg" alt="">
+                            <div class="bottom-left-corner">
+                                <!-- Decorative horizontal lines -->
+                                <hr class="hr1">
+                                <hr class="hr2">
+                            </div>
+                        </div>
+                    </div>
 
-      mobileMenu.addEventListener("click", () => {
-        navList.classList.toggle("active");
-        mobileMenu.classList.toggle("active");
-      });
-    </script>
+                     <!-- Fifth slide: Contact Me -->
+                    <div class="swiper-slide contactMe">
+                        <h1 class="heading">Contact Me</h1>
+                        <div class="contact">
+                            <!-- Phone contact information -->
+                            <i class="fa-solid fa-phone"></i>
+                            <h3>Phone</h3>
+                            <p>(+250)789-405-661</p>
+                        </div>
+                        <div class="contact">
+                            <!-- Location information -->
+                             <i class="fa-solid fa-location-dot"></i>
+                            <h3>Location</h3>
+                            <p>Kigali,Rwanda</p>
+                        </div>
+                        <div class="contact">
+                            <!-- Email contact information -->
+                             <i class="fa-regular fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p>milkakeza9@gmail.com</p>
+                        </div>
+                        <div class="contact">
+                            <!-- GitHub profile link -->
+                             <i class="fa-brands fa-github"></i>
+                            <h3>github</h3>
+                            <p><a href="https://github.com/milkakeza">https://github.com/milkakeza</a></p>
+                        </div>
 
-    <script>
-      let slideIndex = 0; // Start at the first slide
-      showSlides(); // Call function to show slides
+                         <!-- A Message form -->
+                        <form>
+                            <h2>Leave A Message</h2>
+                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="email">
+                            <textarea rows="10" placeholder="Type your Message Here..."></textarea>
+                            <button class="primary">Send</button>
+    
+                        </form>
 
-      function showSlides() {
-        const slides = document.getElementsByClassName("mySlides");
+                        <!-- Footer message -->
+                        <footer>
+                            <li>Every line of code has a story. Thanks for being part of mine.</li>
+                        </footer>
+                    </div>
+                </div>
+        </main>
 
-        // Loop through all slides and set display to none
-        for (let i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-
-        slideIndex++; // Move to the next slide
-        if (slideIndex > slides.length) {
-          slideIndex = 1;
-        } // Reset to first slide
-        slides[slideIndex - 1].style.display = "block"; // Display the current slide
-        setTimeout(showSlides, 3000); // Change slide every 3 seconds
-      }
-    </script>
-  </body>
+        <!-- Swiper JS library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+        <!-- Link to custom JavaScript file -->
+        <script src="main.js"></script>
+    </body>
 </html>
